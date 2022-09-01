@@ -14,6 +14,6 @@ A collection of selected data science projects to demonstrate skill sets, knowle
 - **Movement of old projects into this repository**
     - Bike trips in Chicago
 - **New and ongoing projects**
-    - Data Analysis in Python
+    - Data Analysis in Python 
     - Machine Learning
         - Filling missing values (station names) in the divvy bikes dataset
