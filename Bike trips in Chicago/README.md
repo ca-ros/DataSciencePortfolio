@@ -47,7 +47,7 @@ Lyft currently manages all of the largest bike share systems in the United State
 ## Goal
 Design marketing strategies aimed at converting casual riders into annual members.
 
-## Ask Phase
+## Research Questions
 Three questions will guide the future marketing program:
 
 1. How do annual members and casual riders use Cyclistic bikes differently?
