@@ -2,7 +2,7 @@
 
 <h2 align = "center">Introduction</h2>
 
-The documentation is about the data wrangling process of the data set owned by [Divvy bikes](https://divvybikes.com) which consists of list of biketrips in Chicago with 8 years worth of data from 2013-2021 consisting of 33 million records. This consists of different wrangling techniques of data from collecting, combining, cleaning, validating, removing unnecessary data, and adding missing data. 
+This documentation is about the data wrangling process of the data set used in this project owned by [Divvy bikes](https://divvybikes.com). This project utilized different data wrangling processes such as collecting, combining, cleaning, validating, removing unnecessary data, and adding missing data. 
 
 ### Tools used in this project
 
@@ -14,6 +14,8 @@ Database System used to store, organize, clean, process, and filter the data set
 
 
 ### 🚴‍♀️ The Data
+
+This data set contains 8 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
 
 Each trip is anonymized and includes:
 - Trip start day and time
