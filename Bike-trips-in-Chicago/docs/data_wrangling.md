@@ -23,7 +23,7 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 - [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table:
   - Download the updated version [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
-  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
+  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
 
 > The Stations table continues to get updates. I noticed some changes since I downloaded the data on May 15, 2022 and redownload on June 28, 2022. When I check the site, there is an update on May 18, 2022 hence the change in data.
 
@@ -314,7 +314,7 @@ We need to import the **Stations** table to serve as a reference for our cleanin
 <h3 id = "preparation">Preparation</h3>
 
 Steps:
-1. **Open Excel**: *Under Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate and import [Divvy_Bicycle_Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). Under *Data Type Detection* select *Do not detect data types* and click **Load**. Delete **Sheet1**.
+1. **Open Excel**: *Under Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate and import [Divvy_Bicycle_Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv). Under *Data Type Detection* select *Do not detect data types* and click **Load**. Delete **Sheet1**.
 2. **Remove row1**: Under *Table Design* > *Tools* > click *Convert to Range*, select **OK**. Then delete row1 which contains column#.
 3. **Freeze the header row/ top row**: Under *View* > *Window* > *Freeze Panes* > *Freeze Top Row*.
 4. **Delete duplicate stations**: Use conditional formatting on ColumnB (Station Name) to easily identify duplicate values. Under *Home* > *Styles* > *Conditional Formatting* > *Highlight Cell Rules* > *Duplicate Values*.
@@ -323,7 +323,7 @@ Steps:
 7. **Remove column**: **Docks in Service**
 8. Change the values under **Status** column: Not in Service = No, In Service = Yes.
 9. **Rename columns**: Station Name = **name**, Total Docks = **docks**, Status = **in_service**, and Location = **coordinate**.
-12. Save as [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/Stations.csv).
+12. Save as [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/Stations.csv).
 
 > P.S. You can open normally the csv file using Excel but it will mess-up the station IDs.
 
@@ -412,7 +412,7 @@ WHERE NOT EXISTS (
 -- 163 records
 ```
 
-Export the result as [trips_p1_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.csv).
+Export the result as [trips_p1_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/trips_p1_stations.csv).
 
 In order to analyze the table, the following is done.
 
@@ -422,7 +422,7 @@ In order to analyze the table, the following is done.
 2. **Start recording macro**: Under *Developer* > *Code* > *Record Macro*. Macro name: **divvy**, and click **OK**. 
 3. Rename sheet to "**trips_stations**". Rename columns: **id = old_id** & **name = old_name**.
 4. Create a new header for column C: **new_id**, column D: **new_name**, column E: **changes**, and column F: **verified**.
-5. **Import the Stations table**: Under *Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/Stations.csv). Then, under *Data Type Detection*, select *Do not detect data types* and click **Load**.
+5. **Import the Stations table**: Under *Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/Stations.csv). Then, under *Data Type Detection*, select *Do not detect data types* and click **Load**.
 6. **Remove row1**: Under *Table Design* > *Tools* > click **Convert to Range**, select **OK**. Then delete row1 which contains column#.
 7. Copy column **id** to the right of column **name**. *Right Click* column C and select Insert, a new empty column C should appear. Copy ColumnA to ColumnC.
 8. **Freeze the header row/ top row**: Under *View* > *Window* > *Freeze Panes* > *Freeze Top Row*. Do the same for the other sheet.
@@ -494,19 +494,19 @@ In order to analyze the table, the following is done.
     - For **missing stations**: (24 records)
 
       1. **Create new table**: Right click sheet **missing_stations** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [missing_stations_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p1.csv).
+      2. Save it as [missing_stations_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/missing_stations_p1.csv).
 
     - For **id changes**: (2 records)
 
       1. **Create new table**: Right click sheet **id_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [id_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/id_changes_p1.csv).
+      2. Save it as [id_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/id_changes_p1.csv).
 
     - For **name changes**: (137 records)
 
       1. **Create new table**: Right click sheet **name_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [name_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/name_changes_p1.csv).
+      2. Save it as [name_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/name_changes_p1.csv).
 
-14. **Save** the workbook, [trips_p1_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.xlsm).
+14. **Save** the workbook, [trips_p1_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/trips_p1_stations.xlsm).
 
 > **Optional**: You can hide error values indicators. Under *File* > *Options* > *Formulas* > *Error Checking* > uncheck *Enable background error checking*.
 
@@ -519,282 +519,10 @@ We need to debug and clean the macros to remove any possible errors. Not only th
 You can also just import the modules. On Microsoft VBA, right-click *Modules* folder > *Import file* > locate the modules > click *Open*. <br>
 
 Download modules here:
-- [divvy.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/vba/divvy.bas)
-- [newtables.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/vba/newtables.bas)
+- [divvy.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/vba/divvy.bas)
+- [newtables.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/vba/newtables.bas)
 
-**VBScripts**:
 
-- divvy.bas
-
-```vb
-Sub divvy()
-'
-' divvy Macro
-'
-' Keyboard Shortcut: Ctrl+Shift+Y
-'
-    ActiveSheet.Name = "trips_stations"
-    Range("A1").Value = "old_id"
-    Range("B1").Value = "old_name"
-    Range("C1").Value = "new_id"
-    Range("D1").Value = "new_name"
-    Range("E1").Value = "changes"
-    Range("F1").Value = "verified"
-    ActiveWorkbook.Queries.Add Name:="Stations", Formula:= _
-        "let" & Chr(13) & "" & Chr(10) & "    Source = Csv.Document(File.Contents(""C:\Users\Chris\Documents\GitHub\divvy-bikeshare\data wrangling\csv files\stations_cleaning\Stations.csv""),[Delimiter="","", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None])," & Chr(13) & "" & Chr(10) & "    #""Change Type"" = Table.TransformColumnTypes(Source,{{""Column1"", type text}, {""Column2"", type text}, {""Column3"", type text}, {""" & _
-        "Column4"", type text}, {""Column5"", type text}, {""Column6"", type text}, {""Column7"", type text}})" & Chr(13) & "" & Chr(10) & "in" & Chr(13) & "" & Chr(10) & "    #""Change Type"""
-    ActiveWorkbook.Worksheets.Add
-    With ActiveSheet.ListObjects.Add(SourceType:=0, Source:= _
-        "OLEDB;Provider=Microsoft.Mashup.OleDb.1;Data Source=$Workbook$;Location=Stations;Extended Properties=""""" _
-        , Destination:=Range("$A$1")).QueryTable
-        .CommandType = xlCmdSql
-        .CommandText = Array("SELECT * FROM [Stations]")
-        .RowNumbers = False
-        .FillAdjacentFormulas = False
-        .PreserveFormatting = True
-        .RefreshOnFileOpen = False
-        .BackgroundQuery = True
-        .RefreshStyle = xlInsertDeleteCells
-        .SavePassword = False
-        .SaveData = True
-        .AdjustColumnWidth = True
-        .RefreshPeriod = 0
-        .PreserveColumnInfo = True
-        .ListObject.DisplayName = "Stations"
-        .Refresh BackgroundQuery:=False
-    End With
-    ActiveSheet.Name = "Stations"
-    ActiveSheet.ListObjects("Stations").Unlist
-    Application.CommandBars("Queries and Connections").Visible = False
-    Rows("1:1").Select
-    Selection.Delete Shift:=xlUp
-    Cells.Style = "Normal"
-    Rows("1:1").Font.Bold = True
-    Columns("C:C").Select
-    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
-    Columns("A:A").Copy
-    Range("C1").Select
-    ActiveSheet.Paste
-    Application.CutCopyMode = False
-    Range("A1").Select
-    Columns("A:A").ColumnWidth = 13.43
-    Columns("B:B").ColumnWidth = 34
-    Columns("C:C").ColumnWidth = 8.57
-    Rows("1:1").Select
-    Selection.AutoFilter
-    Sheets("trips_stations").Select
-    Rows("1:1").Select
-    Selection.Font.Bold = True
-    With ActiveWindow
-        .SplitColumn = 0
-        .SplitRow = 1
-    End With
-    ActiveWindow.FreezePanes = True
-    Selection.AutoFilter
-    Columns("B:B").ColumnWidth = 36.14
-    Columns("C:C").EntireColumn.AutoFit
-    Columns("D:D").ColumnWidth = 34.29
-    Columns("E:E").EntireColumn.AutoFit
-    Columns("F:F").EntireColumn.AutoFit
-    ActiveCell.FormulaR1C1 = "old_id"
-    Range("C2").Select
-    With Selection
-        .Formula = "=IFNA(VLOOKUP(TEXT(B2,0),Stations!$B:$D,2,FALSE),""same"")"
-        .AutoFill Destination:=Range("C2:C" & Range("A" & Rows.Count).End(xlUp).Row)
-    End With
-    Range(Selection, Selection.End(xlDown)).Select
-    Range("D2").Select
-    With Selection
-        .Formula = "=IFNA(VLOOKUP(TEXT(A2,0),Stations!$A:$B,2,FALSE),""same"")"
-        .AutoFill Destination:=Range("D2:D" & Range("A" & Rows.Count).End(xlUp).Row)
-    End With
-    Range(Selection, Selection.End(xlDown)).Select
-    Range("E2").Select
-    With Selection
-        .Formula = "=IF(C2 = """", ""missing"", IF(AND(D2=""same"",C2=""same""),""missing"",IF(B2=D2,""same"",IF(AND(A2<>C2,D2=""same""),""id"",IF(AND(B2<>D2,C2=""same""),""name"",IF(AND(A2<>C2,B2<>D2),""both""))))))"
-        .AutoFill Destination:=Range("E2:E" & Range("A" & Rows.Count).End(xlUp).Row)
-    End With
-    Range(Selection, Selection.End(xlDown)).Select
-    Columns("A:A").Select
-    Selection.FormatConditions.AddUniqueValues
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    Selection.FormatConditions(1).DupeUnique = xlDuplicate
-    With Selection.FormatConditions(1).Font
-        .Color = -16383844
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13551615
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("B:B").Select
-    Selection.FormatConditions.AddUniqueValues
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    Selection.FormatConditions(1).DupeUnique = xlDuplicate
-    With Selection.FormatConditions(1).Font
-        .Color = -16383844
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13551615
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("F:F").Select
-    Selection.FormatConditions.Add Type:=xlTextString, String:="y", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16752384
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13561798
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("C:C").Select
-    Selection.FormatConditions.Add Type:=xlTextString, String:="same", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16752384
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13561798
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("D:D").Select
-    Selection.FormatConditions.Add Type:=xlTextString, String:="same", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16752384
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13561798
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("E:E").Select
-    Selection.FormatConditions.Add Type:=xlTextString, String:="missing", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16383844
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13551615
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Selection.FormatConditions.Add Type:=xlTextString, String:="name", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16754788
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 10284031
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Selection.FormatConditions.Add Type:=xlTextString, String:="id", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .Color = -16752384
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13561798
-        .TintAndShade = 0
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Columns("E:E").Select
-    Selection.FormatConditions.Add Type:=xlTextString, String:="both", _
-        TextOperator:=xlContains
-    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1).Font
-        .ThemeColor = xlThemeColorAccent1
-        .TintAndShade = -0.499984740745262
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorAccent1
-        .TintAndShade = 0.399945066682943
-    End With
-    Selection.FormatConditions(1).StopIfTrue = False
-    Sheets("trips_stations").Move Before:=Sheets(1)
-    Range("A1").Select
-End Sub
-```
-
-- newtables
-
-```vb
-Sub newtables()
-'
-' newtables Macro
-'
-
-'
-    ActiveSheet.Range("$A$1:$F" & Range("A" & Rows.Count).End(xlUp).Row).AutoFilter Field:=5, Criteria1:="missing"
-    Range("A:A,B:B").Select
-    Range("B1").Activate
-    Selection.Copy
-    Sheets.Add After:=ActiveSheet
-    ActiveSheet.Paste
-    Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
-    ActiveSheet.Name = "missing_stations"
-    Range("A1").Select
-    Sheets("trips_stations").Select
-    ActiveSheet.Range("$A$1:$F" & Range("A" & Rows.Count).End(xlUp).Row).AutoFilter Field:=5, Criteria1:="=both", _
-        Operator:=xlOr, Criteria2:="=id"
-    Range("B:B,C:C").Select
-    Range("C1").Activate
-    Selection.Copy
-    Sheets.Add After:=ActiveSheet
-    ActiveSheet.Paste
-    Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
-    ActiveSheet.Name = "id_changes"
-    Range("A1").Select
-    Sheets("trips_stations").Select
-    ActiveSheet.Range("$A$1:$F" & Range("A" & Rows.Count).End(xlUp).Row).AutoFilter Field:=5, Criteria1:="=both", _
-        Operator:=xlOr, Criteria2:="=name"
-    Range("B:B,D:D").Select
-    Range("D1").Activate
-    Selection.Copy
-    Sheets.Add After:=ActiveSheet
-    ActiveSheet.Paste
-    Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
-    ActiveSheet.Name = "name_changes"
-    Range("A1").Select
-    Sheets("trips_stations").Select
-    Range("A1").Select
-    ActiveSheet.Range("$A$1:$F$164").AutoFilter Field:=5
-End Sub
-```
 
 <h4 id = "sql-query">SQL Query</h4>
 
@@ -901,7 +629,7 @@ WHERE NOT EXISTS (
 -- 716 records
 ```
 
-Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/csv%20files/stations/trips_p2_stations.csv). 
+Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/trips_p2_stations.csv). 
 
 <h4 id = "process-1">Process</h4>
 
@@ -981,19 +709,19 @@ Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/DataScien
     - For **missing stations**:
 
       1. **Create new table**: Right click sheet **missing_stations** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [missing_stations_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p2.csv).
+      2. Save it as [missing_stations_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/missing_stations_p2.csv).
 
     - For **id changes**: (2 records)
 
       1. **Create new table**: Right click sheet **id_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [id_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/id_changes_p2.csv).
+      2. Save it as [id_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/id_changes_p2.csv).
 
     - For **name changes**: (137 records)
 
       1. **Create new table**: Right click sheet **name_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [name_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/name_changes_p2.csv).
+      2. Save it as [name_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/name_changes_p2.csv).
 
-7. **Save** the workbook, [trips_p2_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p2_stations.xlsm).
+7. **Save** the workbook, [trips_p2_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/trips_p2_stations.xlsm).
 
 > **Optional**: You can hide error values indicators. Under *File* > *Options* > *Formulas* > *Error Checking* > uncheck *Enable background error checking*.
 
@@ -1334,7 +1062,7 @@ WHERE trip_duration < 60
 
 <h3 id = "missing-stations"><strong>Missing stations</strong></h3>
 
-Now that we have the missing stations from the 2 tables, trips_p1 & trips_p2, combine them into one table and save as [missing_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations.csv).
+Now that we have the missing stations from the 2 tables, trips_p1 & trips_p2, combine them into one table and save as [missing_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_cleaning/missing_stations.csv).
 
 *Import csv file*
 
