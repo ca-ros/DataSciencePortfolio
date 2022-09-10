@@ -2,7 +2,16 @@
 
 <h2 align = "center">Introduction</h2>
 
-This dataset contains a list of biketrips in Chicago with trip duration greater than 60 seconds. The data is provided by [Divvy bikes](https://divvybikes.com).
+The documentation is about the data wrangling process of the data set owned by [Divvy bikes](https://divvybikes.com) which consists of list of biketrips in Chicago with 8 years worth of data from 2013-2021 consisting of 33 million records. This consists of different wrangling techniques of data from collecting, combining, cleaning, validating, removing unnecessary data, and adding missing data. 
+
+### Tools used in this project
+
+- [RStudio](https://www.rstudio.com/products/rstudio/download/): combining multiple CSV files using `readr` and `dplyr`.
+- [MS Excel](https://www.microsoft.com/en-ww/microsoft-365/excel): dirty data extracted from SQL database are cleaned and used to identify the missing data using Excel tools such as VBA, macros, VLOOKUP, logical functions, conditional formatting, and data filtering.
+- [Notepad++](https://notepad-plus-plus.org/downloads/): opened large CSV files that MS Excel can't handle to renam column names to match the entire data set
+- [PostgreSQL](https://www.postgresql.org/download/): the Relational 
+Database System used to store, organize, clean, process, and filter the data set.
+
 
 ### 🚴‍♀️ The Data
 
@@ -17,21 +26,11 @@ The data has been processed to remove trips that are taken by staff as they serv
 
 Questions relating to trip data should be sent to <a href = "mailto:bike-data@lyft.com">bike-data@lyft.com</a>. Requests to use trademarks and trade names should be sent to <a href = "mailto:trademarks@lyft.com">trademarks@lyft.com</a>.
 
-> Read [system-data](https://ride.divvybikes.com/system-data).
+> To know more about system-data, visit this link [link](https://ride.divvybikes.com/system-data).
 
 ### 🔗 Data sources
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
-- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table:
-  - Download the updated version [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
-  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
-
-> The Stations table continues to get updates. I noticed some changes since I downloaded the data on May 15, 2022 and redownload on June 28, 2022. When I check the site, there is an update on May 18, 2022 hence the change in data.
-
-### Tools used
-- [MS Excel](https://www.microsoft.com/en-ww/microsoft-365/excel)
-- [Notepad++](https://notepad-plus-plus.org/downloads/)
-- [PostgreSQL](https://www.postgresql.org/download/)
-- [RStudio](https://www.rstudio.com/products/rstudio/download/)
+- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
 
 &nbsp;
 
