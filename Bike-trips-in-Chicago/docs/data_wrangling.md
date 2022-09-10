@@ -2,7 +2,7 @@
 
 <h2 align = "center">Introduction</h2>
 
-This dataset contains a list of biketrips in Chicago with trip duration greater than 60 seconds. It is provided by [Divvy bikes](https://divvybikes.com) according to the [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement).
+This dataset contains a list of biketrips in Chicago with trip duration greater than 60 seconds. The data is provided by [Divvy bikes](https://divvybikes.com).
 
 ### 🚴‍♀️ The Data
 
@@ -1123,3 +1123,6 @@ Download here:
 - [Google Drive](https://drive.google.com/file/d/1xhHuh9WXHtIBLPV6OO-a62th6Ev27jmM/view?usp=sharing)
 
 > This dataset contains stations with null values. I kept it incased someone need the entire data. These will be filled with data in the future after I have a good grasp in **Machine Learning** and **Web Scraping**.  
+
+
+
