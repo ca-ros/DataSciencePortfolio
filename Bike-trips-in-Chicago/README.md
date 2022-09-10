@@ -21,7 +21,7 @@ The data has been processed to remove trips that are taken by staff as they serv
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 - [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table:
   - Download the updated version [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
-  - Download the version I used [here](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
+  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
 
 > The Stations table continues to get updates. I noticed some changes since I downloaded the data on May 15, 2022 and redownload on June 28, 2022. When I check the site, there is an update on May 18, 2022 hence the change in data.
 
@@ -57,7 +57,7 @@ Three questions will guide the future marketing program:
 
 ## Documentation
 
-- [Data wrangling](https://github.com/ca-ros/divvy-bikeshare/blob/master/docs/data_wrangling.md)
+- [Data wrangling](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/docs/data_wrangling.md)
 - Data analysis with Python (**Coming soon** 🚧)
 - Machine learning with Python: Filling missing values (station names) using coordinates (**Coming soon** 🚧)
 
@@ -66,7 +66,7 @@ Three questions will guide the future marketing program:
 
 Preview:
 
-![](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/data-viz-v2.png)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/data-viz-v2.png)
 
 
 ## 🧹 Cleaned Dataset

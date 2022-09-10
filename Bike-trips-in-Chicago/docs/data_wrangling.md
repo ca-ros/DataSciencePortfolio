@@ -23,7 +23,7 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 - [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table:
   - Download the updated version [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
-  - Download the version I used [here](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
+  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
 
 > The Stations table continues to get updates. I noticed some changes since I downloaded the data on May 15, 2022 and redownload on June 28, 2022. When I check the site, there is an update on May 18, 2022 hence the change in data.
 
@@ -314,7 +314,7 @@ We need to import the **Stations** table to serve as a reference for our cleanin
 <h3 id = "preparation">Preparation</h3>
 
 Steps:
-1. **Open Excel**: *Under Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate and import [Divvy_Bicycle_Stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). Under *Data Type Detection* select *Do not detect data types* and click **Load**. Delete **Sheet1**.
+1. **Open Excel**: *Under Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate and import [Divvy_Bicycle_Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_raw/Divvy_Bicycle_Stations.csv). Under *Data Type Detection* select *Do not detect data types* and click **Load**. Delete **Sheet1**.
 2. **Remove row1**: Under *Table Design* > *Tools* > click *Convert to Range*, select **OK**. Then delete row1 which contains column#.
 3. **Freeze the header row/ top row**: Under *View* > *Window* > *Freeze Panes* > *Freeze Top Row*.
 4. **Delete duplicate stations**: Use conditional formatting on ColumnB (Station Name) to easily identify duplicate values. Under *Home* > *Styles* > *Conditional Formatting* > *Highlight Cell Rules* > *Duplicate Values*.
@@ -323,7 +323,7 @@ Steps:
 7. **Remove column**: **Docks in Service**
 8. Change the values under **Status** column: Not in Service = No, In Service = Yes.
 9. **Rename columns**: Station Name = **name**, Total Docks = **docks**, Status = **in_service**, and Location = **coordinate**.
-12. Save as [Stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/Stations.csv).
+12. Save as [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/Stations.csv).
 
 > P.S. You can open normally the csv file using Excel but it will mess-up the station IDs.
 
@@ -412,7 +412,7 @@ WHERE NOT EXISTS (
 -- 163 records
 ```
 
-Export the result as [trips_p1_stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.csv).
+Export the result as [trips_p1_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.csv).
 
 In order to analyze the table, the following is done.
 
@@ -422,7 +422,7 @@ In order to analyze the table, the following is done.
 2. **Start recording macro**: Under *Developer* > *Code* > *Record Macro*. Macro name: **divvy**, and click **OK**. 
 3. Rename sheet to "**trips_stations**". Rename columns: **id = old_id** & **name = old_name**.
 4. Create a new header for column C: **new_id**, column D: **new_name**, column E: **changes**, and column F: **verified**.
-5. **Import the Stations table**: Under *Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate [Stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/Stations.csv). Then, under *Data Type Detection*, select *Do not detect data types* and click **Load**.
+5. **Import the Stations table**: Under *Data* > *Get & Transform Data* > *Get Data* > *From File* > *From Text/CSV* > locate [Stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/Stations.csv). Then, under *Data Type Detection*, select *Do not detect data types* and click **Load**.
 6. **Remove row1**: Under *Table Design* > *Tools* > click **Convert to Range**, select **OK**. Then delete row1 which contains column#.
 7. Copy column **id** to the right of column **name**. *Right Click* column C and select Insert, a new empty column C should appear. Copy ColumnA to ColumnC.
 8. **Freeze the header row/ top row**: Under *View* > *Window* > *Freeze Panes* > *Freeze Top Row*. Do the same for the other sheet.
@@ -458,26 +458,26 @@ In order to analyze the table, the following is done.
 
       - Search Chicago to focus the search in Chicago City.
 
-      ![Chicago](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw1.png)
+      ![Chicago](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw1.png)
 
       - Enter the station_name, **Wood St & Division St**, and *press Enter*.
       - Click **Nearby** and search **divvy**, to search nearby divvy-bike stations.
 
-      ![17](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw2.png)
+      ![17](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw2.png)
 
       - Hover over to the nearest station to view the station name.
 
-      ![17.2](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw3.png)
+      ![17.2](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw3.png)
 
       The nearest station is **Honore St & Division St**.
 
       > Upon checking the **Stations** table on ID number 17, we can confirm that station_id 17 is Honore St & Division St.
 
-      ![17 excel](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw4.png)
+      ![17 excel](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw4.png)
 
       > Thus, **Wood St & Division St** is a wrong station name and must be replaced with correct name **Honore St & Division St**. You can also notice under **changes** column, it says **name**, which means **name change**.
 
-      ![sample excel](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw5.png)
+      ![sample excel](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw5.png)
 
 13. **Create new tables**
 
@@ -494,19 +494,19 @@ In order to analyze the table, the following is done.
     - For **missing stations**: (24 records)
 
       1. **Create new table**: Right click sheet **missing_stations** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [missing_stations_p1.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p1.csv).
+      2. Save it as [missing_stations_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p1.csv).
 
     - For **id changes**: (2 records)
 
       1. **Create new table**: Right click sheet **id_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [id_changes_p1.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/id_changes_p1.csv).
+      2. Save it as [id_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/id_changes_p1.csv).
 
     - For **name changes**: (137 records)
 
       1. **Create new table**: Right click sheet **name_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [name_changes_p1.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/name_changes_p1.csv).
+      2. Save it as [name_changes_p1.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/name_changes_p1.csv).
 
-14. **Save** the workbook, [trips_p1_stations.xlsm](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.xlsm).
+14. **Save** the workbook, [trips_p1_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p1_stations.xlsm).
 
 > **Optional**: You can hide error values indicators. Under *File* > *Options* > *Formulas* > *Error Checking* > uncheck *Enable background error checking*.
 
@@ -519,8 +519,8 @@ We need to debug and clean the macros to remove any possible errors. Not only th
 You can also just import the modules. On Microsoft VBA, right-click *Modules* folder > *Import file* > locate the modules > click *Open*. <br>
 
 Download modules here:
-- [divvy.bas](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/vba/divvy.bas)
-- [newtables.bas](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/vba/newtables.bas)
+- [divvy.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/vba/divvy.bas)
+- [newtables.bas](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/vba/newtables.bas)
 
 **VBScripts**:
 
@@ -901,7 +901,7 @@ WHERE NOT EXISTS (
 -- 716 records
 ```
 
-Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/csv%20files/stations/trips_p2_stations.csv). 
+Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/csv%20files/stations/trips_p2_stations.csv). 
 
 <h4 id = "process-1">Process</h4>
 
@@ -956,7 +956,7 @@ Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/divvy-bik
 
       5. **Locate** both coordinates in Google Maps. 
 
-      ![coordinate](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw6.png)
+      ![coordinate](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw6.png)
 
       6. Both coordinates point at **Divvy Service Warehouse**. Therefore, change the name of both stations to **Divvy Service Warehouse** and use ID = **671**.
       7. Put "**y**" in the **verified** column. 
@@ -965,11 +965,11 @@ Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/divvy-bik
       1. Sort sheet by column **id** in ascending order and look for duplicate values.
       2. On ID = **329**, we can see different records. One record has changes to **name** and the other has changes to **both**.
 
-      ![329](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw7.png)
+      ![329](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw7.png)
 
       3. The station name **Central Park Ave & Douglas Blvd** is actually on the **Stations** table, its just the ID used in the **trips** table is different which creates a conflict with on station IDs. Therefore, we can change the value in **new_name** column by **same**.
 
-      ![329 cleaned](https://github.com/ca-ros/divvy-bikeshare/blob/master/resources/img/dw8.png)
+      ![329 cleaned](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/dw8.png)
 
       4. Put "**y**" in the **verified** column.
 
@@ -981,19 +981,19 @@ Export the result as [trips_p2_stations.csv](https://github.com/ca-ros/divvy-bik
     - For **missing stations**:
 
       1. **Create new table**: Right click sheet **missing_stations** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [missing_stations_p2.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p2.csv).
+      2. Save it as [missing_stations_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations_p2.csv).
 
     - For **id changes**: (2 records)
 
       1. **Create new table**: Right click sheet **id_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [id_changes_p2.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/id_changes_p2.csv).
+      2. Save it as [id_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/id_changes_p2.csv).
 
     - For **name changes**: (137 records)
 
       1. **Create new table**: Right click sheet **name_changes** > *Move or Copy* > *To book* > *new book*.
-      2. Save it as [name_changes_p2.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/name_changes_p2.csv).
+      2. Save it as [name_changes_p2.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/name_changes_p2.csv).
 
-7. **Save** the workbook, [trips_p2_stations.xlsm](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/trips_p2_stations.xlsm).
+7. **Save** the workbook, [trips_p2_stations.xlsm](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/trips_p2_stations.xlsm).
 
 > **Optional**: You can hide error values indicators. Under *File* > *Options* > *Formulas* > *Error Checking* > uncheck *Enable background error checking*.
 
@@ -1334,7 +1334,7 @@ WHERE trip_duration < 60
 
 <h3 id = "missing-stations"><strong>Missing stations</strong></h3>
 
-Now that we have the missing stations from the 2 tables, trips_p1 & trips_p2, combine them into one table and save as [missing_stations.csv](https://github.com/ca-ros/divvy-bikeshare/blob/master/data%20wrangling/csv%20files/stations_cleaning/missing_stations.csv).
+Now that we have the missing stations from the 2 tables, trips_p1 & trips_p2, combine them into one table and save as [missing_stations.csv](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/data%20wrangling/csv%20files/stations_cleaning/missing_stations.csv).
 
 *Import csv file*
 
