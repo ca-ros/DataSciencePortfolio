@@ -4,7 +4,8 @@ In this project, we carry out exploratory analysis of the Divvy data set by sett
 *The project was completed as a part of Google's Data Analytics Professional Certificate online course on Coursera and to showcase and develop my skills as a Data Analyst.*
 
 ## 🚴‍♀️ About the Data
-This data set contains 8 years worth of divvy-bikes trip data from 2013-2021. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/).
+
+This data set contains 8 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
 
 Each trip is anonymized and includes:
 - Trip start day and time
