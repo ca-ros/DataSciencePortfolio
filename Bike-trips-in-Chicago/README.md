@@ -1,7 +1,7 @@
 ## Introduction
 In this project, we carry out exploratory analysis of the Divvy data set by setting out research questions, and then exploring relationship between stations, user behaviors and bike types to answer those questions.
 
-*The project was completed as a part of Google's Data Analytics Professional Certificate online course on Coursera.*
+*The project was completed as a part of Google's Data Analytics Professional Certificate online course on Coursera and to showcase and develop my skills as a Data Analyst.*
 
 ## 🚴‍♀️ About the Data
 This data set contains 8 years worth of divvy-bikes trip data from 2013-2021. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/).
@@ -19,11 +19,7 @@ The data has been processed to remove trips that are taken by staff as they serv
 
 ### 🔗 Data sources
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
-- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table:
-  - Download the updated version [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
-  - Download the version I used [here](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv). June 28, 2022
-
-> The Stations table continues to get updates. I noticed some changes since I downloaded the data on May 15, 2022 and redownload on June 28, 2022. When I check the site, there is an update on May 18, 2022 hence the change in data.
+- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
 
 ## About the Company
 Divvy is Chicagoland’s bike share system across Chicago and Evanston. Divvy provides residents and visitors with a convenient, fun and affordable transportation option for getting around and exploring Chicago.
@@ -66,4 +62,4 @@ Download here:
 
 ## License
 
-- [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement).
+- [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement)
