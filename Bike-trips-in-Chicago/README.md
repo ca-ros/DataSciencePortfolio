@@ -4,7 +4,7 @@ In this project, we carry out exploratory analysis of the Divvy data set by sett
 *The project was completed as a part of Google's Data Analytics Professional Certificate online course on Coursera.*
 
 ## 🚴‍♀️ About the Data
-This dataset is provided by [Divvy bikes](https://divvybikes.com) according to the [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement).
+This data set contains 8 years worth of divvy-bikes trip data from 2013-2021. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/).
 
 Each trip is anonymized and includes:
 - Trip start day and time
@@ -15,7 +15,7 @@ Each trip is anonymized and includes:
 
 The data has been processed to remove trips that are taken by staff as they service and inspect the system; and any trips that were below 60 seconds in length (potentially false starts or users trying to re-dock a bike to ensure it was secure).
 
-> To know more about Divvy and the dataset, visit this [link](https://ride.divvybikes.com/system-data).
+> To know more about the system-data, visit this [link](https://ride.divvybikes.com/system-data).
 
 ### 🔗 Data sources
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
@@ -30,21 +30,9 @@ Divvy is Chicagoland’s bike share system across Chicago and Evanston. Divvy pr
 
 Divvy, like other bike share systems, consists of a fleet of specially-designed, sturdy and durable bikes that are locked into a network of docking stations throughout the region. The bikes can be unlocked from one station and returned to any other station in the system. People use bike share to explore Chicago, commute to work or school, run errands, get to appointments or social engagements, and more.
 
-Divvy is available for use 24 hours/day, 7 days/week, 365 days/year, and riders have access to all bikes and stations across the system.
+> To know more about the company, visit this [link](https://ride.divvybikes.com/about).
 
-## About the Owner
-Divvy is a program of the [Chicago Department of Transportation](https://www.chicago.gov/city/en/depts/cdot.html) (CDOT), which owns the city’s bikes, stations and vehicles. Initial funding for the program came from federal grants for projects that promote economic recovery, reduce traffic congestion and improve air quality, as well as additional funds from the City’s Tax Increment Financing program. In 2016, Divvy expanded to the neighboring suburb of [Evanston](https://ride.divvybikes.com/explore-chicago/expansion/evanston) with a grant from the State of Illinois.
-
-CDOT’s mission is to keep the city’s surface transportation networks and public ways safe for users, environmentally sustainable and in a state of good repair and attractive, so that its diverse residents, businesses and guests can all enjoy a variety of quality transportation options, regardless of ability or destination.
-
-CDOT’s vision is to ensure that Chicago continues to be a vibrant international city, successfully competing in the global economy with a transportation system that provides high-quality service to residents, businesses, and visitors – a system that offers a solid foundation for the city, regional and national economies, yet is sensitive to its communities and environment.
-
-## About Lyft
-Lyft was founded in 2012 by Logan Green and John Zimmer to improve people’s lives with the world’s best transportation. Lyft is committed to effecting positive change for our cities and making cities more livable for everyone by promoting transportation equity through bikeshare systems and public transit partnerships.
-
-Lyft currently manages all of the largest bike share systems in the United States and many of the largest systems in the world, including Bay Wheels (California Bay Area), Bluebikes (Boston, MA), Citi Bike (New York and Jersey City), Divvy (Chicago, IL), CoGo Bike Share (Columbus, OH), Capital Bikeshare (Washington, D.C.), Nice Ride (Minneapolis, MN), and BIKETOWN (Portland, OR).
-
-## Goal
+## Business Objective
 Design marketing strategies aimed at converting casual riders into annual members.
 
 ## Research Questions
@@ -75,3 +63,7 @@ Download here:
 - [Google Drive](https://drive.google.com/file/d/1xhHuh9WXHtIBLPV6OO-a62th6Ev27jmM/view?usp=sharing)
 
 > This dataset contains stations with null values. I kept it incased someone need the entire data. These will be filled with data in the future after I have a good grasp in **Machine Learning** and **Web Scraping**.  
+
+## License
+
+- [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement).
