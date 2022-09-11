@@ -36,6 +36,98 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
   - Updated version, [September 2022](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq)
   - Version used in this project, [May 2022](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv)
 
+
+## Overview of the tables
+
+### Initial
+
+<table>
+<tr><th>trips_p1 (2013-2019)</th><th>trips_p2 (2020-2021)</th><th>stations</th></tr>
+<tr><td>
+
+| Field name         | Type                        |
+| ------------------ | --------------------------- |
+| trip_id            | bigint                      |
+| start_time         | timestamp without time zone |
+| end_time           | timestamp without time zone |
+| bike_id            | int                         |
+| trip_duration      | int                         |
+| start_station_id   | int                         |
+| start_station_name | varchar(50)                 |
+| end_station_id     | int                         |
+| end_station_name   | varchar(50)                 |
+| user_type          | text                        |
+| gender             | text                        |
+| birth_year         | int                         |
+
+</td><td>
+
+| Field name         | Type                        |
+| ------------------ | --------------------------- |
+| ride_id            | varchar(50)                 |
+| rideable_type      | varchar(50)                 |
+| start_time         | timestamp without time zone |
+| end_time           | timestamp without time zone |
+| start_station_id   | varchar(50)                 |
+| start_station_name | varchar(50)                 |
+| end_station_id     | varchar(50)                 |
+| end_station_name   | varchar(50)                 |
+| start_lat          | numeric                     |
+| start_lng          | numeric                     |
+| end_lat            | numeric                     |
+| end_lng            | numeric                     |
+| user_type          | text                        |
+
+</td><td>
+
+| Field name | Type    |
+| ---------- | ------- |
+| id         | bigint  |
+| name       | varchar |
+| docks      | int     |
+| in_service | text    |
+| latitude   | numeric |
+| longitude  | numeric |
+| coordinate | point   |
+
+</td></tr> </table>
+
+### Final
+
+<table>
+<tr><th>trips (2013=2021)</th><th>stations</th></tr>
+<tr><td>
+
+| Field name         | Type                        |
+| ------------------ | --------------------------- |
+| ride_id            | varchar(50)                 |
+| rideable_type      | varchar(50)                 |
+| bike_id            | int                         |
+| start_time         | timestamp without time zone |
+| end_time           | timestamp without time zone |
+| trip_duration      | int                         |
+| start_station_id   | bigint                      |
+| start_station_name | varchar(50)                 |
+| end_station_id     | bigint                      |
+| end_station_name   | varchar(50)                 |
+| user_type          | text                        |
+| gender             | text                        |
+| birth_year         | int                         |
+
+</td><td>
+
+| Field name | Type        |
+| ---------- | ----------- |
+| id         | bigint      |
+| name       | varchar(50) |
+| docks      | int         |
+| in_service | text        |
+| latitude   | numeric     |
+| longitude  | numeric     |
+| coordinate | point       |
+
+</td></tr> </table>
+
 &nbsp;
 
 <h2 align = "center">Table of Content</h2>
@@ -265,28 +357,28 @@ DELIMITER ',' CSV HEADER QUOTE '"' NULL 'NA';
 | trip_id            | bigint                      |
 | start_time         | timestamp without time zone |
 | end_time           | timestamp without time zone |
-| bike_id            | integer                     |
-| duration           | integer                     |
-| start_station_id   | integer                     |
-| start_station_name | character varying           |
-| end_station_id     | integer                     |
-| end_station_name   | character varying           |
+| bike_id            | int                         |
+| trip_duration      | int                         |
+| start_station_id   | int                         |
+| start_station_name | varchar(50)                 |
+| end_station_id     | int                         |
+| end_station_name   | varchar(50)                 |
 | user_type          | text                        |
 | gender             | text                        |
-| birth_year         | integer                     |
+| birth_year         | int                         |
 
 </td><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
-| ride_id            | character varying           |
-| rideable_type      | character varying           |
+| ride_id            | varchar(50)                 |
+| rideable_type      | varchar(50)                 |
 | start_time         | timestamp without time zone |
 | end_time           | timestamp without time zone |
-| start_station_id   | character varying           |
-| start_station_name | character varying           |
-| end_station_id     | character varying           |
-| end_station_name   | character varying           |
+| start_station_id   | varchar(50)                 |
+| start_station_name | varchar(50)                 |
+| end_station_id     | varchar(50)                 |
+| end_station_name   | varchar(50)                 |
 | start_lat          | numeric                     |
 | start_lng          | numeric                     |
 | end_lat            | numeric                     |
@@ -872,28 +964,28 @@ Before combining both tables, some changes has to be made first. By checking the
 | trip_id            | bigint                      |
 | start_time         | timestamp without time zone |
 | end_time           | timestamp without time zone |
-| bike_id            | integer                     |
-| duration           | integer                     |
-| start_station_id   | integer                     |
-| start_station_name | character varying           |
-| end_station_id     | integer                     |
-| end_station_name   | character varying           |
+| bike_id            | int                         |
+| trip_duration      | int                         |
+| start_station_id   | int                         |
+| start_station_name | varchar(50)                 |
+| end_station_id     | int                         |
+| end_station_name   | varchar(50)                 |
 | user_type          | text                        |
 | gender             | text                        |
-| birth_year         | integer                     |
+| birth_year         | int                         |
 
 </td><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
-| ride_id            | character varying           |
-| rideable_type      | character varying           |
+| ride_id            | varchar(50)                 |
+| rideable_type      | varchar(50)                 |
 | start_time         | timestamp without time zone |
 | end_time           | timestamp without time zone |
-| start_station_id   | character varying           |
-| start_station_name | character varying           |
-| end_station_id     | character varying           |
-| end_station_name   | character varying           |
+| start_station_id   | varchar(50)                 |
+| start_station_name | varchar(50)                 |
+| end_station_id     | varchar(50)                 |
+| end_station_name   | varchar(50)                 |
 | start_lat          | numeric                     |
 | start_lng          | numeric                     |
 | end_lat            | numeric                     |
@@ -950,6 +1042,25 @@ SELECT
   CAST(null AS int) AS birth_year
 FROM trips_p2;
 ```
+
+**Overview**
+
+| Field name         | Type                        |
+| ------------------ | --------------------------- |
+| ride_id            | varchar(50)                 |
+| rideable_type      | varchar(50)                 |
+| bike_id            | int                         |
+| start_time         | timestamp without time zone |
+| end_time           | timestamp without time zone |
+| trip_duration      | int                         |
+| start_station_id   | bigint                      |
+| start_station_name | varchar(50)                 |
+| end_station_id     | bigint                      |
+| end_station_name   | varchar(50)                 |
+| user_type          | text                        |
+| gender             | text                        |
+| birth_year         | int                         |
+
 
 <h3 align = "center" id = "null-values"><strong>Missing values</strong></h3>
 
