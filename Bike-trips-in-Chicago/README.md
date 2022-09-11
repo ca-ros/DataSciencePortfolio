@@ -20,7 +20,9 @@ The data has been processed to remove trips that are taken by staff as they serv
 
 ### 🔗 Data sources
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
-- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
+- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table
+  - Updated version, [September 2022](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq)
+  - Version used in this project, [May 2022](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv)
 
 ## About the Company
 Divvy is Chicagoland’s bike share system across Chicago and Evanston. Divvy provides residents and visitors with a convenient, fun and affordable transportation option for getting around and exploring Chicago.
