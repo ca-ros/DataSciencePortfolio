@@ -2,7 +2,7 @@
 
 <h2 align = "center">Introduction</h2>
 
-This documentation is about the data wrangling process of the data set used in this project owned by [Divvy bikes](https://divvybikes.com). This project utilized different data wrangling processes such as collecting, combining, cleaning, validating, removing unnecessary data, and adding missing data. 
+This documentation is about the data wrangling process of the data set used in this project owned by [Divvy bikes](https://divvybikes.com). Performed data wrangling processes such as collecting, combining, cleaning, validating, removing unnecessary data, and adding missing data to prepare the data for the analysis.
 
 ### Tools used in this project
 
@@ -32,7 +32,9 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
 
 ### 🔗 Data sources
 - [Divvy bikes](https://divvybikes.com), download the raw data-sets [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
-- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table [here](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq).
+- [Chicago Data Portal](https://data.cityofchicago.org/), download the raw stations-table
+  - Updated version, [September 2022](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq)
+  - Version used in this project, [May 2022](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv)
 
 &nbsp;
 
