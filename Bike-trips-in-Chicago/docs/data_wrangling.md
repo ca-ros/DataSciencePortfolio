@@ -254,7 +254,9 @@ DELIMITER ',' CSV HEADER QUOTE '"' NULL 'NA';
 
 <h3 id = "data-structure">Data structure</h3>
 
-- trips_p1
+<table>
+<tr><th>trips_p1</th><th>trips_p2</th></tr>
+<tr><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
@@ -271,8 +273,7 @@ DELIMITER ',' CSV HEADER QUOTE '"' NULL 'NA';
 | gender             | text                        |
 | birth_year         | integer                     |
 
-
-- trips_p2
+</td><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
@@ -289,6 +290,8 @@ DELIMITER ',' CSV HEADER QUOTE '"' NULL 'NA';
 | end_lat            | numeric                     |
 | end_lng            | numeric                     |
 | user_type          | text                        |
+
+</td></tr> </table>
 
 <h3 id = "irrelevant-data">Irrelevant data</h3>
 
@@ -858,7 +861,9 @@ Before combining both tables, some changes has to be made first. By checking the
 
 <h4 id = "schema"><strong>Schema</strong></h4>
 
-- trips_p1
+<table>
+<tr><th>trips_p1</th><th>trips_p2</th></tr>
+<tr><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
@@ -875,8 +880,7 @@ Before combining both tables, some changes has to be made first. By checking the
 | gender             | text                        |
 | birth_year         | integer                     |
 
-
-- trips_p2
+</td><td>
 
 | Field name         | Type                        |
 | ------------------ | --------------------------- |
@@ -893,6 +897,8 @@ Before combining both tables, some changes has to be made first. By checking the
 | end_lat            | numeric                     |
 | end_lng            | numeric                     |
 | user_type          | text                        |
+
+</td></tr> </table>
 
 
 **Table changes**:
