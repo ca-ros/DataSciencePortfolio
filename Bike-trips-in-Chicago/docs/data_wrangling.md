@@ -97,39 +97,6 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
 
 ![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/diagram_final.png)
 
-<table>
-<tr><th>trips (2013=2021)</th><th>Stations</th></tr>
-<tr><td>
-
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| ride_id            | varchar(50)      |
-| rideable_type      | varchar(50)      |
-| bike_id            | int              |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| trip_duration      | int              |
-| start_station_id   | bigint           |
-| start_station_name | varchar(50)      |
-| end_station_id     | bigint           |
-| end_station_name   | varchar(50)      |
-| user_type          | text             |
-| gender             | text             |
-| birth_year         | int              |
-
-</td><td>
-
-| Field name | Type        |
-| ---------- | ----------- |
-| id         | bigint      |
-| name       | varchar(50) |
-| docks      | int         |
-| in_service | text        |
-| latitude   | numeric     |
-| longitude  | numeric     |
-| coordinate | point       |
-
-</td></tr> </table>
 
 &nbsp;
 
