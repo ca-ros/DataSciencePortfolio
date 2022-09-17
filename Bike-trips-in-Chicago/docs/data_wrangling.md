@@ -276,44 +276,7 @@ DELIMITER ',' CSV HEADER QUOTE '"' NULL 'NA';
 
 <h3 id = "data-structure">Data structure</h3>
 
-<table>
-<tr><th>trips_p1</th><th>trips_p2</th></tr>
-<tr><td>
-
-| Field name         | Type                        |
-| ------------------ | --------------------------- |
-| trip_id            | bigint                      |
-| start_time         | timestamp without time zone |
-| end_time           | timestamp without time zone |
-| bike_id            | int                         |
-| trip_duration      | int                         |
-| start_station_id   | int                         |
-| start_station_name | varchar(50)                 |
-| end_station_id     | int                         |
-| end_station_name   | varchar(50)                 |
-| user_type          | text                        |
-| gender             | text                        |
-| birth_year         | int                         |
-
-</td><td>
-
-| Field name         | Type                        |
-| ------------------ | --------------------------- |
-| ride_id            | varchar(50)                 |
-| rideable_type      | varchar(50)                 |
-| start_time         | timestamp without time zone |
-| end_time           | timestamp without time zone |
-| start_station_id   | varchar(50)                 |
-| start_station_name | varchar(50)                 |
-| end_station_id     | varchar(50)                 |
-| end_station_name   | varchar(50)                 |
-| start_lat          | numeric                     |
-| start_lng          | numeric                     |
-| end_lat            | numeric                     |
-| end_lng            | numeric                     |
-| user_type          | text                        |
-
-</td></tr> </table>
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_both.png)
 
 <h3 id = "irrelevant-data">Irrelevant data</h3>
 
@@ -883,44 +846,7 @@ Before combining both tables, some changes has to be made first. By checking the
 
 <h4 id = "schema"><strong>Schema</strong></h4>
 
-<table>
-<tr><th>trips_p1</th><th>trips_p2</th></tr>
-<tr><td>
-
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| trip_id            | bigint           |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| bike_id            | int              |
-| trip_duration      | int              |
-| start_station_id   | int              |
-| start_station_name | varchar(50)      |
-| end_station_id     | int              |
-| end_station_name   | varchar(50)      |
-| user_type          | text             |
-| gender             | text             |
-| birth_year         | int              |
-
-</td><td>
-
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| ride_id            | varchar(50)      |
-| rideable_type      | varchar(50)      |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| start_station_id   | varchar(50)      |
-| start_station_name | varchar(50)      |
-| end_station_id     | varchar(50)      |
-| end_station_name   | varchar(50)      |
-| start_lat          | numeric          |
-| start_lng          | numeric          |
-| end_lat            | numeric          |
-| end_lng            | numeric          |
-| user_type          | text             |
-
-</td></tr> </table>
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_both.png)
 
 
 **Table changes**:
@@ -973,21 +899,7 @@ FROM trips_p2;
 
 **Overview**
 
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| ride_id            | varchar(50)      |
-| rideable_type      | varchar(50)      |
-| bike_id            | int              |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| trip_duration      | int              |
-| start_station_id   | bigint           |
-| start_station_name | varchar(50)      |
-| end_station_id     | bigint           |
-| end_station_name   | varchar(50)      |
-| user_type          | text             |
-| gender             | text             |
-| birth_year         | int              |
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_trips.png)
 
 
 <h3 align = "center" id = "null-values"><strong>Missing values</strong></h3>
