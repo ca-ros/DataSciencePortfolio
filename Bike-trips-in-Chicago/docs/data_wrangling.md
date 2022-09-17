@@ -846,7 +846,7 @@ Before combining both tables, some changes has to be made first. By checking the
 
 <h4 id = "schema"><strong>Schema</strong></h4>
 
-![]()
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_both.png)
 
 
 **Table changes**:
