@@ -38,7 +38,7 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
 
 ## Overview of the Data
 
-![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/data_overview.png)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/data_overview2.png)
 
 ## Overview of the tables
 
