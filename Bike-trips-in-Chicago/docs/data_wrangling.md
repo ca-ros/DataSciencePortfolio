@@ -175,7 +175,7 @@ Steps:
 
 **Overview**
 
-![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/folder.png)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/folder2.png)
 
 <h3 id = "load-the-libraries">Load the libraries</h3>
 
