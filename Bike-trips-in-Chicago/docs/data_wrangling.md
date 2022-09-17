@@ -15,7 +15,7 @@ Database System used to store, organize, clean, process, and filter the data set
 
 ### 🚴‍♀️ The Data
 
-This data set contains 8 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
+This data set contains 9 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
 
 Each trip is anonymized and includes:
 - Trip start day and time
@@ -36,66 +36,20 @@ Questions relating to trip data should be sent to <a href = "mailto:bike-data@ly
   - Updated version, [September 2022](https://data.cityofchicago.org/Transportation/Divvy-Bicycle-Stations/bbyy-e7gq)
   - Version used in this project, [May 2022](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/csv-files/stations_raw/Divvy_Bicycle_Stations.csv)
 
+## Overview of the Data
+
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/data_overview.png)
 
 ## Overview of the tables
 
 ### Initial
 
-<table>
-<tr><th>trips_p1 (2013-2019)</th><th>trips_p2 (2020-2021)</th><th>stations</th></tr>
-<tr><td>
-
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| trip_id            | bigint           |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| bike_id            | int              |
-| trip_duration      | int              |
-| start_station_id   | int              |
-| start_station_name | varchar(50)      |
-| end_station_id     | int              |
-| end_station_name   | varchar(50)      |
-| user_type          | text             |
-| gender             | text             |
-| birth_year         | int              |
-
-</td><td>
-
-| Field name         | Type             |
-| ------------------ | ---------------- |
-| ride_id            | varchar(50)      |
-| rideable_type      | varchar(50)      |
-| start_time         | timestamp w/o tz |
-| end_time           | timestamp w/o tz |
-| start_station_id   | varchar(50)      |
-| start_station_name | varchar(50)      |
-| end_station_id     | varchar(50)      |
-| end_station_name   | varchar(50)      |
-| start_lat          | numeric          |
-| start_lng          | numeric          |
-| end_lat            | numeric          |
-| end_lng            | numeric          |
-| user_type          | text             |
-
-</td><td>
-
-| Field name | Type    |
-| ---------- | ------- |
-| id         | bigint  |
-| name       | varchar |
-| docks      | int     |
-| in_service | text    |
-| latitude   | numeric |
-| longitude  | numeric |
-| coordinate | point   |
-
-</td></tr> </table>
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_initial.png)
 
 ### Final
 
 
-![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/diagram_final.png)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_final.png)
 
 
 &nbsp;
@@ -218,6 +172,10 @@ Steps:
 2. Download the stations data [here](https://data.cityofchicago.org/api/views/bbyy-e7gq/rows.csv?accessType=DOWNLOAD), this data is from [Chicago Data Portal](https://data.cityofchicago.org/). For this analysis, I will refer to the table as **Stations table**.
 3. After extracting the zip files, compile separately the bike-trips data and the stations data included in that folder. Name the folder as the part it represents *e.g. trips_p1*.
 4. Start compiling the data, **trips_p1** folder must contain data from year *2013-2019* and **trips_p2** folder must contain data from year *2020-2021*.
+
+**Overview**
+
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/folder.png)
 
 <h3 id = "load-the-libraries">Load the libraries</h3>
 
@@ -1208,7 +1166,7 @@ WHERE s.name = c.old_name;
 
 **Overview**
 
-![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/diagram_final.png)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/table_final.png)
 
 <h2 id = "cleaned-dataset">🧹 Cleaned Dataset</h2>
 
