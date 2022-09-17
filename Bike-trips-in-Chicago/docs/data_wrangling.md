@@ -1206,6 +1206,10 @@ FROM id_changes_stations as c
 WHERE s.name = c.old_name;
 ```
 
+**Overview**
+
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/tables/diagram_final.png)
+
 <h2 id = "cleaned-dataset">🧹 Cleaned Dataset</h2>
 
 Download here:
