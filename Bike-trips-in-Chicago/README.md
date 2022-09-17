@@ -5,7 +5,7 @@ In this project, we carry out exploratory analysis of the Divvy data set by sett
 
 ## 🚴‍♀️ About the Data
 
-This data set contains 8 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
+This data set contains 9 years worth of divvy-bikes trip data from 2013-2021 with a total of 33 million records. The data is provided by [Divvy bikes](https://divvybikes.com) and wrangled by [Chris](https://www.linkedin.com/in/arthur0418/), that's me.
 
 Each trip is anonymized and includes:
 - Trip start day and time
