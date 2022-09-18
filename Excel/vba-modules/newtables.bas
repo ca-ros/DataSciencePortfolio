@@ -13,8 +13,8 @@ Attribute newtables.VB_ProcData.VB_Invoke_Func = " \n14"
     Sheets.Add After:=ActiveSheet
     ActiveSheet.Paste
     Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
+    Columns("A:A").ColumnWidth = 35
+    Columns("B:B").ColumnWidth = 35
     ActiveSheet.Name = "missing_stations"
     Range("A1").Select
     Sheets("trips_stations").Select
@@ -26,8 +26,8 @@ Attribute newtables.VB_ProcData.VB_Invoke_Func = " \n14"
     Sheets.Add After:=ActiveSheet
     ActiveSheet.Paste
     Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
+    Columns("A:A").ColumnWidth = 35
+    Columns("B:B").ColumnWidth = 35
     ActiveSheet.Name = "id_changes"
     Range("A1").Select
     Sheets("trips_stations").Select
@@ -39,8 +39,8 @@ Attribute newtables.VB_ProcData.VB_Invoke_Func = " \n14"
     Sheets.Add After:=ActiveSheet
     ActiveSheet.Paste
     Application.CutCopyMode = False
-    Columns("A:A").ColumnWidth = 36.43
-    Columns("B:B").ColumnWidth = 33.14
+    Columns("A:A").ColumnWidth = 35
+    Columns("B:B").ColumnWidth = 35
     ActiveSheet.Name = "name_changes"
     Range("A1").Select
     Sheets("trips_stations").Select

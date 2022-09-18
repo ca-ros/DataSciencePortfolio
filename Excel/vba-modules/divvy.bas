@@ -49,9 +49,9 @@ Sub divvy()
     ActiveSheet.Paste
     Application.CutCopyMode = False
     Range("A1").Select
-    Columns("A:A").ColumnWidth = 13.43
-    Columns("B:B").ColumnWidth = 34
-    Columns("C:C").ColumnWidth = 8.57
+    Columns("A:A").ColumnWidth = 15
+    Columns("B:B").ColumnWidth = 35
+    Columns("C:C").ColumnWidth = 10
     Rows("1:1").Select
     Selection.AutoFilter
     Sheets("trips_stations").Select
@@ -63,9 +63,9 @@ Sub divvy()
     End With
     ActiveWindow.FreezePanes = True
     Selection.AutoFilter
-    Columns("B:B").ColumnWidth = 36.14
+    Columns("B:B").ColumnWidth = 35
     Columns("C:C").EntireColumn.AutoFit
-    Columns("D:D").ColumnWidth = 34.29
+    Columns("D:D").ColumnWidth = 35
     Columns("E:E").EntireColumn.AutoFit
     Columns("F:F").EntireColumn.AutoFit
     ActiveCell.FormulaR1C1 = "old_id"
