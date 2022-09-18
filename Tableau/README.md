@@ -15,4 +15,4 @@ A collection of selected Tableau projects to demonstrate skill sets, knowledge, 
 ## Preview
 - Bike trips in Chicago
 
-![](https://public.tableau.com/views/BiketripsinChicago/viz?:language=en-US&:display_count=n&:origin=viz_share_link)
+![](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/resources/img/data-viz-v2.png)
