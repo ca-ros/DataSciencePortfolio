@@ -2,9 +2,6 @@
 A collection of selected Python projects to demonstrate skill sets, knowledge, and what I find interesting
 
 ## Contents
-- **Part of Bike trips in Chicago project**
-    - Machine Learning - divvy
-        - Filling missing values (station names) in the divvy bikes dataset
 - **Guided Projects** - small projects that I've done while exploring python
     - CarGame
         - Give instruction, **START** or **STOP**, and receive update on the vehicle
