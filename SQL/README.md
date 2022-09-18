@@ -1,4 +1,4 @@
-# DataSciencePortfolio
+# SQL Portfolio
 A collection of selected SQL projects to demonstrate skill sets, knowledge, and what I find interesting
 
 ## Content
