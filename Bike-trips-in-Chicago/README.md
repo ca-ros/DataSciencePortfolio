@@ -46,7 +46,8 @@ Three questions will guide the future marketing program:
 
 - [Data wrangling](https://github.com/ca-ros/DataSciencePortfolio/blob/master/Bike-trips-in-Chicago/docs/data_wrangling.md)
 - Data analysis with Python (**Coming soon** 🚧)
-- Machine learning with Python: Filling missing values (station names) using coordinates (**Coming soon** 🚧)
+- Machine learning with Python (**Coming soon** 🚧)
+  - Filling missing values (station names) using coordinates 
 
 ## Dashboard
 - [Biketrips in Chicago](https://public.tableau.com/app/profile/chris.arthur.rosaroso/viz/BiketripsinChicago/viz)
